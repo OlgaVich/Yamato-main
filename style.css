@@ -1,0 +1,222 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.25;
+  background-color: black;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo-kaligrafie {
+  height: 80px;
+  width: auto;
+  padding: 0;
+
+  
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 30px;
+  
+}
+
+.header-navigation li{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header-navigation a{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    text-decoration: none;
+   
+    
+}
+
+.header-navigation a:hover {
+    text-decoration: underline;
+}
+.header-navigation a:active {
+    text-decoration: underline;
+}
+.header-navigation a:visited {
+    text-decoration: none;
+}
+
+h2, 
+p {
+  color: white;
+  text-align: center;
+  
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+p {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.photomain {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-new {
+  margin-left: auto;
+  margin-right: auto;
+    display: block;
+    height: 60px;
+    width: auto;
+
+}
+
+.footer-content {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+
+h3 {
+  color: #AA0000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  margin-top: 0;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-contact a {
+  color: white;
+  
+}
+
+.footer-navigation li{
+    display: inline-block;
+  align-items: center;
+  margin-top: 20px;
+   
+}
+
+.footer-navigation a{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: underline;
+    
+}
+
+.opening-hours p{
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  
+}
+
+.social {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 20px;
+   
+}
+
+.social a {
+    color: white;
+    margin-left: 20px;
+}
+
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-michelin {
+  margin-left: auto;
+  margin-right: auto;
+    display: block;
+    height: 60px;
+    width: auto;
+
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.logo-facebook,
+.logo-instagram {
+    height: 40px;
+    width: auto;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.work-sans-ExtraLight200 {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  } 
+
+/*
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.work-sans-<uniquifier> {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} 
+*/
