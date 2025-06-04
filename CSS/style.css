@@ -12,89 +12,70 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
+  
 }
 
 .header {
-  background-color: black;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
-.logo-kaligrafie {
+.header__logo {
   height: 80px;
   width: auto;
-  padding: 0;
-
-  
+  padding: 0; 
 }
 
-ul {
-  list-style-type: none;
-  margin-bottom: 30px;
-  
-}
 
-.header-navigation li{
+.header-navigation__tabs {
   display: inline-block;
   text-decoration: none;
+  margin: 0;
 }
 
-.header-navigation a{
+.header-navigation__button {
     color: white;
     font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 0;
-    text-decoration: none;
-   
+    text-decoration: none; 
     
 }
 
-.header-navigation a:hover {
+.header-navigation__button:hover {
     text-decoration: underline;
 }
-.header-navigation a:active {
+.header-navigation__button:active {
     text-decoration: underline;
 }
-.header-navigation a:visited {
+.header-navigation__button:visited {
     text-decoration: none;
 }
 
-h2, 
-p {
-  color: white;
-  text-align: center;
-  
-}
-
-h2 {
+.main-content__title {
   font-size: 26px;
   font-weight: 300;
   margin-top: 30px;
+  color: white;
+  text-align: center;
 }
-p {
+.main-content__paragraph {
   font-size: 16px;
   margin-top: 30px;
+  color: white;
+  text-align: center;
 }
 
-.photomain {
+.main-content__photo-image {
   display: block;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.logo-new {
-  margin-left: auto;
-  margin-right: auto;
-    display: block;
-    height: 60px;
-    width: auto;
-
-}
 
 .footer-content {
   background-color: black;
@@ -105,7 +86,7 @@ p {
   width: 100%;
 }
 
-h3 {
+.footer-content__michelin-name {
   color: #AA0000;
   text-align: center;
   font-size: 14px;
@@ -114,7 +95,32 @@ h3 {
   margin-top: 0;
 }
 
-h4 {
+.footer-contact__address {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.footer-contact__phone {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+ 
+}
+.footer-contact__email {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.footer-info__opening-hours {
   color: white;
   text-align: center;
   font-size: 16px;
@@ -124,19 +130,16 @@ h4 {
   margin-bottom: 10px;
 }
 
-.footer-contact a {
-  color: white;
-  
-}
 
-.footer-navigation li{
-    display: inline-block;
+
+.footer-navigation__tabs {
+  display: inline-block;
   align-items: center;
   margin-top: 20px;
    
 }
 
-.footer-navigation a{
+.footer-navigation__button{
     color: white;
     font-size: 20px;
     margin-left: 20px;
@@ -145,33 +148,34 @@ h4 {
     
 }
 
-.opening-hours p{
+.footer-info__opening-hours-content{
   color: white;
   text-align: center;
   font-size: 14px;
   
 }
 
-.social {
+.footer-info__social {
     display: flex;
+    gap: 10px;
     justify-content: right;
     align-items: center;
     margin-top: 20px;
    
 }
 
-.social a {
-    color: white;
-    margin-left: 20px;
-}
 
+.footer-navigation__list {
+    list-style-type: none;
+    padding: 0;
+  }
 
 .footer-copyright {
   display: flex;
   justify-content: space-between;
 }
 
-.logo-michelin {
+.footer-content__michelin-logo {
   margin-left: auto;
   margin-right: auto;
     display: block;
@@ -186,13 +190,10 @@ p {
 
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
 
-.logo-facebook,
-.logo-instagram {
+
+.footer-info__social-logo-facebook,
+.footer-info__social-logo-instagram {
     height: 40px;
     width: auto;
     background-color: white;

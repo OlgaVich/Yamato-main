@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title}}</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- Header Section -->
+
+<header class="header">
+    <img src="/obrazky/YAMATO_650mm_black_background.svg" alt="Yamato Logo" class="header__logo">
+    
+    <navigation class="header-navigation">
+        <ul class="header-navigation__list">
+            <li class="header-navigation__tabs"><a class="header-navigation__button" href="/o_nas/">O nás</a></li>
+            <li class="header-navigation__tabs"><a class="header-navigation__button" href="menu">Menu</a></li>
+            <li class="header-navigation__tabs"><a class="header-navigation__button" href="napoje">Nápoje</a></li>
+            <li class="header-navigation__tabs"><a class="header-navigation__button" href="nastym">Náš tým</a></li>
+            <li class="header-navigation__tabs"><a class="header-navigation__button" href="privateevents">Private events</a></li>
+            <li class="header-navigation__tabs"><a class="header-navigation__button" href="catering">Catering</a></li>
+            <li class="header-navigation__tabs"><a class="header-navigation__button" href="rezervace">Rezervace</a></li>
+        </ul>
+    </navigation>
+
+</header>
+
+<main class="main-content">
+
+ {{content | safe}}
+
+    
+</main>
+
+<footer class="footer">
+
+    <div class="footer-content">
+        <a class="footer-content__michelin" href="https://guide.michelin.com/cz/en/prague/prague/restaurant/yamato"target="_blank">
+            <img src="/obrazky/Michelin_Guide_logo.svg" alt="Michelin guide Logo" class="footer-content__michelin-logo">
+            <h3 class="footer-content__michelin-name">Michelin Guide</h3>
+        </a>
+            
+        <div class="footer-contact">
+            <a class="footer-contact__address" href="https://maps.app.goo.gl/cQfsZCiSoz1crB1m6" target="_blank">U kanálky 14, Praha 2</a> <br>
+            <a class="footer-contact__email" href="mailto: info2yamato.cz" target="_blank">info@yamato.cz</a>  
+            <p class="footer-contact__phone" >+420 222 212 617</p>
+        </div>
+
+        <navigation class="footer-navigation">
+        
+            <ul class="footer-navigation__list">
+                <li class="footer-navigation__tabs"><a class="footer-navigation__button" href="#kontaktujtenas">Kontaktujte nás</a></li>
+                <li class="footer-navigation__tabs"><a class="footer-navigation__button" href="#partneri">Partneři</a></li>
+                <li class="footer-navigation__tabs"><a class="footer-navigation__button" href="#darkovypoukaz">Dárkový poukaz</a></li>
+                <li class="footer-navigation__tabs"><a class="footer-navigation__button" href="#kariera">Kariéra</a></li>
+            </ul>
+        </navigation>
+
+        
+        <div class="footer-info">
+        
+            <div class="footer-info__opening-hours">
+                <h4 class="footer-info__opening-hours_title">Otevírací doba</h4>
+                <p class="footer-info__opening-hours-content">Pondělí - Pátek: 12:00 - 15:00, 17:30 - 23:00</p>
+                <p class="footer-info__opening-hours-content">Sobota: 12:00 - 22:30</p>
+            </div>
+
+
+            <div class="footer-info__social">
+                <a class="footer-info__social-facebook" href="https://www.facebook.com/YamatoPragueofficial" target="_blank">
+                    <img src="/obrazky/10462343.svg" alt="Facebook Logo" class="footer-info__social-logo-facebook">
+                </a>
+                <a class="footer-info__social-instagram" href="https://www.instagram.com/Yamato_prague" target="_blank">
+                    <img src="/obrazky/CIS-A2K_Instagram_Icon_(Black).svg" alt="Instagram Logo" class="footer-info__social-logo-instagram">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            
+            <p class="footer-copyright__creator">Created by Smart Panda</p>
+            <p class="footer-copyright__yamato">&copy; YAMATO Prague 2013-2025</p>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
