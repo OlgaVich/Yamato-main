@@ -30,18 +30,24 @@ body {
 
 
 .header-navigation__tabs {
-  display: inline-block;
-  text-decoration: none;
+  position: relative;
+  
+}
+
+.header-navigation__list {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .header-navigation__button {
     color: white;
     font-size: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 0;
+    padding: 15px 15px;
     text-decoration: none; 
+    display: block;
     
 }
 
@@ -53,6 +59,39 @@ body {
 }
 .header-navigation__button:visited {
     text-decoration: none;
+}
+
+
+.header-navigation__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  min-width: 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  flex-direction: column;
+  
+}
+
+.header-navigation__link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  white-space: nowrap;
+
+}
+
+.header-navigation__link:hover {
+  background-color: #AA0000;
+}
+
+.menu__item--has-submenu:hover .header-navigation__submenu {
+  display: flex;
 }
 
 .main-content__title {
