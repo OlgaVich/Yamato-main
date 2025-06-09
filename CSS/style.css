@@ -11,8 +11,14 @@ body {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
   
+  color:white
+  
+}
+
+a {
+  color: white;
+ 
 }
 
 .header {
@@ -249,6 +255,184 @@ p {
     font-style: normal;
   } 
 
+  
+  .menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    
+  }
+  .menu-maki {
+    background-color: black;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    color:white
+  }
+  
+  .evening-menu {
+    background-color: black;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 800px;
+    color:white
+  }
+  
+  .evening-menu__heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+  }
+  
+  .evening-menu__final-info {
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    color:white
+  }
+  
+  .evening-menu__pairing-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .evening-menu__pairing-item-name {
+    flex: 1;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .evening-menu__pairing-item-price {
+    flex: 0 0 100px;
+    text-align: right;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  
+  
+  
+  .menu-sushi {
+    background-color: black;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    max-width: 600px;
+  }
+  
+  .menu__maki {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 600px;
+  }
+  
+  .menu__drink {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .menu__item-description-flex {
+    flex: 0 1 auto;
+    margin: 0;
+  }
+  .menu__item-price-flex {
+    flex: 0 1 auto;
+    text-align: right;
+    margin: 0;
+  }
+  .menu__item {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: fit-content fit-content;
+    grid-gap: 5px;
+    padding-bottom: 15px;
+    color: white;
+  }
+  
+  .menu__heading {
+    font-size: 1,5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  .menu__subheading {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  .menu__subheading-description {
+    font-size: 1rem;
+    margin: O;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .menu__subheading-item-price {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  
+  .menu__item-name {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 400;
+   
+  }
+  
+  .menu__item-description {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+    font-size: 1rem;
+    margin: 0;
+   
+  }
+  
+  .menu__item-price {
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 1;
+    text-align: right;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+  }
+  
+  .menu__note {
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .menu__link {
+    color: white;
+  }  
+
+/* rezervacni formular */
+
+
+
+
 /*
 // <weight>: Use a value from 100 to 900
 // <uniquifier>: Use a unique and descriptive class name
@@ -260,3 +444,157 @@ p {
   font-style: normal;
 } 
 */
+
+.reservation-page {
+  display: flex;
+  justify-content: center;       /* Horizontální zarovnání na střed */
+  align-items: flex-start;       /* Zarovnání nahoře */
+  padding: 4rem 1rem 2rem;       /* Horní mezera + postranní + spodní */
+  /*
+  background-image: url('/images/pozadi.jpg'); /* vlastní pozadí 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  */
+           /* Výška na celou obrazovku */
+  box-sizing: border-box;
+}
+
+.reservation {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto; /* Center the form */
+  
+}
+
+.reservation__heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.reservation__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.reservation__input,
+.reservation__select,
+.reservation__textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  display: block;
+}
+
+.reservation__input:focus,
+.reservation__select:focus,
+.reservation__textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(170, 0, 0, 0.5);
+  border-color: #AA0000 !important;
+  
+}
+
+.reservation__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.reservation__button {
+  width: 100%;
+  
+  padding: 1rem; 
+  background-color: #880000;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.reservation__button:hover {
+  background-color: #880000;
+}
+
+.reservation__step {
+  display: block;
+}
+
+.reservation__confirmation {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  width: 100%;
+}
+
+.reservation__confirmation-heading {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.reservation__confirmation-text {
+  margin-bottom: 0.5rem;
+}
+
+.reservation__note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ddd;
+}
+
+a {
+  color: #AA0000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.reservation__confirmation a[href^="tel:"],
+.reservation__note a[href^="tel:"] {
+  color: #AA0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.reservation__confirmation a[href^="tel:"]:hover,
+.reservation__note a[href^="tel:"]:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .reservation {
+    padding: 1.5rem;
+  }
+  .reservation__heading {
+    font-size: 1.5rem;
+  }
+}
+.reservation__note--step1 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ddd;
+}

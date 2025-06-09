@@ -3,12 +3,138 @@ layout: layouts/sablona-hlavni.njk
 title: Rezervace
 ---
 
-<h2 class="main-content__title">Objevte autentický chuťový zážitek inspirovaný Japonskem, kde se tradice snoubí s precizností a harmonií. </h2>
-<p class="main-content__paragraph">V Yamato věříme, že každý okamžik má svou neopakovatelnou krásu. <br>
-    blaaaa hheee git hdjdkjfjf
-</p>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+<div class="reservation-page">
+    <main class="reservation">
+      <h1 class="reservation__heading">Rezervační formulář</h1>
+  
+      <form class="reservation__form" id="reservation-form">
+        <!-- Krok 1 -->
+        <div class="reservation__step" id="step-1">
+          <label class="reservation__label" for="date">Datum rezervace</label>
+          <input class="reservation__input" id="date" name="date" required />
+  
+          <label class="reservation__label" for="time">Čas rezervace</label>
+          <select class="reservation__input" id="time" name="time" required>
+            <option value="" disabled selected>Vyberte čas</option>
+            <option value="12:00">12:00</option>
+            <option value="12:30">12:30</option>
+            <option value="13:00">13:00</option>
+            <option value="13:30">13:30</option>
+            <option value="14:00">14:00</option>
+            <option value="14:30">14:30</option>
+            <option value="18:00">18:00</option>
+            <option value="18:30">18:30</option>
+            <option value="19:00">19:00</option>
+            <option value="19:30">19:30</option>
+            <option value="20:00">20:00</option>
+            <option value="20:30">20:30</option>
+            <option value="21:00">21:00</option>
+            <option value="21:30">21:30</option>
+          </select>
+  
+          <label class="reservation__label" for="duration">Předpokládaný čas návštěvy (hodiny)</label>
+          <input class="reservation__input" type="number" id="duration" name="duration" min="1" max="6" required />
+  
+          <label class="reservation__label" for="guests">Počet hostů</label>
+          <input class="reservation__input" type="number" id="guests" name="guests" min="1" max="20" required />
+  
+          <button class="reservation__button" type="button" id="next-button">Pokračovat</button>
+  
+          <!-- Poznámka jen pro první krok -->
+          <p class="reservation__note reservation__note--step1">
+            V případě, že Vám nepůjde zarezervovat stůl online, prosíme, volejte na číslo 
+            <a href="tel:+420222212617">+420 222 212 617</a>. Děkujeme.
+          </p>
+        </div>
+  
+        <!-- Krok 2 -->
+        <div class="reservation__step" id="step-2" style="display: none;">
+          <label class="reservation__label" for="name">Jméno</label>
+          <input class="reservation__input" type="text" id="name" name="name" required />
+  
+          <label class="reservation__label" for="email">E-mailová adresa</label>
+          <input class="reservation__input" type="email" id="email" name="email" required />
+  
+          <label class="reservation__label" for="phone">Telefonní číslo</label>
+          <input class="reservation__input" type="tel" id="phone" name="phone" required />
+  
+          <label class="reservation__label" for="note">Poznámka k rezervaci</label>
+          <textarea class="reservation__input" id="note" name="note" rows="3"></textarea>
+  
+          <button class="reservation__button" type="submit">Odeslat</button>
+        </div>
+      </form>
+  
+      <!-- Potvrzení -->
+      <div class="reservation__confirmation" id="confirmation" style="display: none;">
+        <h2 class="reservation__confirmation-heading">Děkujeme za Vaši rezervaci</h2>
+        <p class="reservation__confirmation-text">
+          Vaše rezervace byla úspěšně odeslána. Brzy Vás budeme kontaktovat pro potvrzení.
+        </p>
+        <p class="reservation__confirmation-text">
+          V případě dotazů volejte <a href="tel:+420222212617">+420 222 212 617</a>.
+        </p>
+      </div>
+    </main>
+  </div>
 
-<div class="main-content__photo">
-    <img src="/images/photomain.jpeg" alt="Mísa Sashimi" class="main-content__photo-image">
-</div>
+<!-- Flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/cs.js"></script>
+
+<script>
+  // Inicializace kalendáře s češtinou a zakázáním nedělí
+  flatpickr("#date", {
+    locale: "cs",
+    dateFormat: "Y-m-d",
+    disable: [
+      function(date) {
+        return date.getDay() === 0; // zakázat neděle
+      }
+    ],
+    minDate: "today",
+  });
+
+  const dateInput = document.getElementById('date');
+  const timeSelect = document.getElementById('time');
+
+  // Reakce na změnu data
+  dateInput.addEventListener('change', () => {
+    const date = new Date(dateInput.value);
+    const day = date.getDay();
+
+    timeSelect.disabled = false;
+
+    const options = timeSelect.querySelectorAll('option');
+    options.forEach(option => {
+      const value = option.value;
+      if (!value) return;
+
+      const hour = parseInt(value.split(':')[0]);
+
+      let valid = false;
+      if (day >= 1 && day <= 5) {
+        valid = (hour >= 12 && hour < 15) || (hour >= 18 && hour < 23);
+      } else if (day === 6) {
+        valid = (hour >= 12 && hour < 22);
+      }
+
+      option.disabled = !valid;
+    });
+  });
+
+  // Přepnutí na krok 2
+  document.getElementById('next-button').addEventListener('click', function () {
+    document.getElementById('step-1').style.display = 'none';
+    document.getElementById('step-2').style.display = 'block';
+  });
+
+  // Potvrzení
+  document.getElementById('reservation-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('reservation-form').style.display = 'none';
+    document.getElementById('confirmation').style.display = 'block';
+  });
+</script>
