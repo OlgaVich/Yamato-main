@@ -8,24 +8,27 @@ body {
   font-style: normal;
   line-height: 1.25;
   background-color: black;
-  max-width: 1100px;
+  color: white;
   margin-left: auto;
   margin-right: auto;
-  
-  color:white
-  
 }
 
-a {
-  color: white;
- 
+strong {
+  font-weight: 400;
 }
+
+/* header */
 
 .header {
   color: white;
+  background-color: black;
+  margin-top: 10px;
+}
+
+.header__logo-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
@@ -34,10 +37,8 @@ a {
   padding: 0; 
 }
 
-
 .header-navigation__tabs {
   position: relative;
-  
 }
 
 .header-navigation__list {
@@ -50,10 +51,11 @@ a {
 
 .header-navigation__button {
     color: white;
-    font-size: 20px;
-    padding: 15px 15px;
+    font-size: 1.3rem;
+    padding: 0px 15px;
     text-decoration: none; 
     display: block;
+    white-space: nowrap;
     
 }
 
@@ -66,7 +68,6 @@ a {
 .header-navigation__button:visited {
     text-decoration: none;
 }
-
 
 .header-navigation__submenu {
   display: none;
@@ -100,18 +101,34 @@ a {
   display: flex;
 }
 
+/* main content */
+
 .main-content__title {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 300;
   margin-top: 30px;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content__subheading {
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 20px;
   color: white;
   text-align: center;
 }
 .main-content__paragraph {
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: 20px;
   color: white;
   text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-content__photo-image {
@@ -121,14 +138,46 @@ a {
   width: 100%;
 }
 
+.main-content__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.main-content__section-title {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+.main-content__section-list {
+  padding: 0;
+  margin: 20px;
+  color: white;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* footer */
 
 .footer-content {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 20px;
-  bottom: 0;
   width: 100%;
+  margin-top: 20px;
+}
+
+.footer-contact__section-title {
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 
 .footer-content__michelin-name {
@@ -138,50 +187,24 @@ a {
   font-weight: 400;
   text-decoration: underline;
   margin-top: 0;
-}
-
-.footer-contact__address {
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-  margin-top: 20px;
-}
-.footer-contact__phone {
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
- 
-}
-.footer-contact__email {
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-info__opening-hours {
   color: white;
   text-align: center;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   margin-top: 40px;
   margin-bottom: 10px;
 }
 
 
-
 .footer-navigation__tabs {
   display: inline-block;
   align-items: center;
-  margin-top: 20px;
-   
+  margin-top: 20px; 
 }
 
 .footer-navigation__button{
@@ -189,24 +212,44 @@ a {
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    text-decoration: underline;
-    
+    text-decoration: underline;    
 }
-
-.footer-info__opening-hours-content{
+.footer-info {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-info__section-title {
+  font-size: 10px;
+  font-weight: 300;
   color: white;
   text-align: center;
-  font-size: 14px;
-  
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.footer-info__social {
+.footer-info__opening-hours-content {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+
+@media (min-width: 800px) {
+  .footer-info__social {
+    justify-content: right;
     display: flex;
     gap: 10px;
-    justify-content: right;
     align-items: center;
     margin-top: 20px;
-   
+}
+}
+
+@media (max-width: 800px) {
+  .footer-info__social {
+    justify-content: right;
+    
+  }
 }
 
 
@@ -218,6 +261,8 @@ a {
 .footer-copyright {
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-content__michelin-logo {
@@ -229,14 +274,6 @@ a {
 
 }
 
-p {
-  font-size: 16px;
-  margin: 0;
-
-}
-
-
-
 .footer-info__social-logo-facebook,
 .footer-info__social-logo-instagram {
     height: 40px;
@@ -247,15 +284,8 @@ p {
     margin-bottom: 5px;
     margin-left: 0;
 }
-
-.work-sans-ExtraLight200 {
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-  } 
-
-  
+ 
+/* menu */
   .menu {
     max-width: 1200px;
     margin: 0 auto;
@@ -264,8 +294,7 @@ p {
     color: white;
     
   }
-  .menu-maki {
-    background-color: black;
+  .menu-maki {  
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -273,8 +302,7 @@ p {
     color:white
   }
   
-  .evening-menu {
-    background-color: black;
+  .evening-menu { 
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -289,6 +317,15 @@ p {
     text-align: center;
     color: white;
     font-weight: 200;
+  }
+
+  .menu__heading-description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    color: white;
   }
   
   .evening-menu__final-info {
@@ -306,28 +343,25 @@ p {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: white;
   }
-  .evening-menu__pairing-item-name {
-    flex: 1;
-    font-size: 0.8rem;
-    font-style: italic;
-  }
+
   .evening-menu__pairing-item-price {
     flex: 0 0 100px;
     text-align: right;
     font-size: 0.8rem;
     font-style: italic;
+    color:white;
   }
-  
-  
   
   .menu-sushi {
     background-color: black;
-    padding: 20px;
+   
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
     max-width: 600px;
+    color: white;
   }
   
   .menu__maki {
@@ -369,6 +403,7 @@ p {
     margin-bottom: 0.5rem;
     text-align: center;
     font-weight: 400;
+    color: white;
   }
   
   .menu__subheading {
@@ -376,6 +411,7 @@ p {
     margin-top: 20px;
     text-align: center;
     font-weight: 400;
+    color: white;
   }
   
   .menu__subheading-description {
@@ -383,12 +419,14 @@ p {
     margin: O;
     text-align: center;
     font-style: italic;
+    color: white;
   }
   
   .menu__subheading-item-price {
     font-size: 1rem;
     margin-bottom: 20px;
     text-align: center;
+    color: white;
   }
   
   
@@ -429,8 +467,6 @@ p {
   }  
 
 /* rezervacni formular */
-
-
 
 
 /*
@@ -475,12 +511,14 @@ p {
   margin-bottom: 1.5rem;
   text-align: center;
   color: #fff;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .reservation__label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
 }
 
@@ -550,6 +588,8 @@ p {
 .reservation__confirmation-heading {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .reservation__confirmation-text {
@@ -597,4 +637,174 @@ a:hover {
   font-size: 0.9rem;
   text-align: center;
   color: #ddd;
+}
+
+/* partneri
+
+Breakpointy
+Mobil   0 - 539px
+Tablet  540px - 959px (čti jako 540px a víc)
+PC      960px a víc */
+
+/*
+h1 {
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	font-size: 2rem;
+
+
+} */
+
+.partner {
+	margin-top: 20px;
+	border: 1px solid silver;
+	padding: 30px;
+	border-radius: 10px;
+	text-align: center;
+  color: white;
+}
+
+.tabulka {
+
+	padding: 50px;
+}
+
+
+@media (min-width: 600px) {
+	.tabulka {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	.partner {
+		margin-top: 0;
+		flex: 0 0 calc((100% - 20px) / 2);
+		display: flex;
+		gap: 20px;
+		text-align: center;
+		flex-direction: column;
+		align-items: center;		
+	}
+
+  .header-navigation__link {
+    color: white;
+   
+  
+  }
+}
+
+
+@media (min-width: 960px) {
+	.partner {
+		flex-basis: calc((100% - 60px) / 3);
+		display: flex;
+		text-align: center;
+		gap: 20px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.tabulka {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+} }
+
+/* partner sustek*/
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  color: black;
+}
+
+.petr { 
+  color: black;
+}
+.profile {
+  flex: 1 1 250px;
+  max-width: 250px;
+}
+.profile img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.info {
+  flex: 2 1 400px;
+}
+.info h2 {
+  margin-top: 0;
+}
+.info p {
+  line-height: 1.6;
+  color: #333;
+}
+form {
+  margin-top: 1.5rem;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: black;
+}
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+button {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: #AA0000 !important;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #880000;
+}
+
+button:focus   {outline: none !important;
+box-shadow: 0 0 0 2px rgba(170, 0, 0, 0.5);
+border-color: #AA0000 !important;
+}
+ /* prepinac CS/EN */
+
+ .language-switcher {
+  text-align: right;
+  margin-top: 0.1rem;
+  margin-right: 1rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: white; /* nebo jiná barva podle pozadí */
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .language-switcher {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-right: 0;
+  }
 }
