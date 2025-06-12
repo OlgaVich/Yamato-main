@@ -857,3 +857,64 @@ border-color: #AA0000 !important;
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/*hamburger menu moje noční můra */
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;                   /*display none */
+}
+
+.menu__toggler {
+  cursor: pointer;
+  color: white;
+  padding-right: 60px;
+  font-size: 2.5rem;
+  
+  
+}
+
+.header-navigation__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: black;
+}
+
+.header-navigation__tabs {
+  border-bottom: 1px solid white;
+}
+
+.header-navigation__link {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+.header-navigation__link:hover {
+  background-color: #AA0000;
+}
+
+.menu__checkbox:checked ~ .header-navigation__list {
+  display: block
+
+}
+
+@media screen  and (min-width: 800px) {
+  .menu__toggler {
+    display: none; /* Skryje checkbox na větších obrazovkách */
+  }
+  .header-navigation__list {
+    display: flex !important ;/* Zobrazí menu jako flexbox */
+    flex-direction: row; /* Horizontální uspořádání */
+    justify-content: center; /* Zarovná položky na střed */
+  }
+  .header-navigation__link {
+    padding: 15px; /* Větší padding pro desktop */
+  }
+
+  .header-navigation__tabs {
+    border-bottom: none; /* Odstraní spodní okraj na desktopu */
+  }
+  
+}
