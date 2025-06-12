@@ -6,6 +6,7 @@
       "serve": "npx @11ty/eleventy --serve",
       "build": "npx @11ty/eleventy"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OlgaVich/Yamato.git"

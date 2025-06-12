@@ -265,6 +265,21 @@ strong {
   margin: 0 auto;
 }
 
+.footer-copyright__creator {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.footer-copyright__yamato {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .footer-content__michelin-logo {
   margin-left: auto;
   margin-right: auto;
@@ -809,3 +824,36 @@ border-color: #AA0000 !important;
   }
 }
 
+/* tym */
+.team {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team__member {
+  text-align: center;
+}
+
+.team__photo {
+  height: 300px; /* cca 8 cm */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.team__caption {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Dva sloupce na větších obrazovkách */
+@media (min-width: 600px) {
+  .team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
