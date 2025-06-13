@@ -106,7 +106,7 @@ strong {
 .main-content__title {
   font-size: 28px;
   font-weight: 300;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   color: white;
   text-align: center;
   max-width: 800px;
@@ -251,19 +251,26 @@ strong {
     
   }
 }
-
+.footer-copyright {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
 
 .footer-navigation__list {
     list-style-type: none;
     padding: 0;
   }
-
+  @media screen  and (min-width: 600px) {
 .footer-copyright {
   display: flex;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
+  }
 
 .footer-copyright__creator {
   color: white;
@@ -300,6 +307,9 @@ strong {
     margin-left: 0;
 }
  
+.main-content {
+  padding: 15px;
+}
 /* menu */
   .menu {
     max-width: 1200px;
@@ -310,7 +320,6 @@ strong {
     
   }
   .menu-maki {  
-    padding: 20px;
     margin-left: auto;
     margin-right: auto;
     max-width: 600px;
@@ -867,7 +876,7 @@ border-color: #AA0000 !important;
 .menu__toggler {
   cursor: pointer;
   color: white;
-  padding-right: 60px;
+  
   font-size: 2.5rem;
   
   
@@ -899,6 +908,14 @@ border-color: #AA0000 !important;
   display: block
 
 }
+.header__logo { 
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__logo-container {
+  display: inline;
+  text-align: center;
+}
 
 @media screen  and (min-width: 800px) {
   .menu__toggler {
@@ -916,5 +933,66 @@ border-color: #AA0000 !important;
   .header-navigation__tabs {
     border-bottom: none; /* Odstraní spodní okraj na desktopu */
   }
+
+  .header__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
   
+}
+
+/* Image wrapper for responsive images */
+.image-wrapper {
+  position:relative;
+  display: inline-block;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Zabrání interakci s pseudo-elementem */
+  
+  background-image:
+  
+    /* Horní pás – tmavá třetina */
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 25%,
+      rgba(0, 0, 0, 0.3) 45%,
+      rgba(0, 0, 0, 0) 60%
+    ),
+    /* Levý horní roh – silnější */
+    radial-gradient(
+      circle at top left,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0) 55%
+    ),
+    /* Pravý horní roh – jemnější a mělčí */
+    radial-gradient(
+      circle at top right,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 20%,
+      rgba(0, 0, 0, 0) 35%
+    ),
+    /* Pravý dolní roh – silnější */
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.6) 30%,
+      rgba(0, 0, 0, 0) 55%
+    );
 }
