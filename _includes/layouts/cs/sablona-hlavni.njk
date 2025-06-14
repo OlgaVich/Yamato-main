@@ -19,64 +19,67 @@
 
 <!-- Header Section -->
 <header class="header">
-
-
   <div class="header__logo-container">
     <a href="/cs/index" class="header__logo-link">
       <img src="/images/YAMATO_650mm_black_background.svg" alt="Yamato Logo" class="header__logo">
     </a>
     <nav class="header-navigation">
+      <!-- Hlavní menu toggle -->
       <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
       <label for="menu-checkbox" class="menu__toggler">☰</label>
-  
 
-  
       <ul class="header-navigation__list">
-    
-          <li class="header-navigation__tabs">
-            <a class="header-navigation__button" href="/cs/o_nas/">O nás</a>
-          </li>
-    
-          <li class="header-navigation__tabs menu__item--has-submenu">
-            <p class="header-navigation__button" >Menu</p>
-            <ul class="header-navigation__submenu">
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/menu/poledni/">Polední menu</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/menu/sashimi/">Sashimi</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/menu/nigiri/">Nigiri Zushi</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/menu/maki/">Hoso maki & Uramaki</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/menu/alacarte/">A La Carte</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/menu/degustacni/">Degustační menu</a></li>
-            </ul>
-          </li>
-    
-          <li class="header-navigation__tabs menu__item--has-submenu">
-            <p class="header-navigation__button">Nápoje</p>
-            <ul class="header-navigation__submenu">
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/napoje/napojovy_listek/">Nápojový_lístek</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/napoje/sake/">Japonské saké</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/napoje/whisky/">Japonská whisky</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/napoje/vino/">Vinný lístek</a></li>
-              <li class="header-navigation__tabs"><a class="header-navigation__link" href="/cs/napoje/champagne/">Champagne</a></li>
-            </ul>
-          </li>
-    
-          <li class="header-navigation__tabs">
-            <a class="header-navigation__button" href="/cs/nas_tym/">Náš tým</a>
-          </li>
-          <li class="header-navigation__tabs">
-            <a class="header-navigation__button" href="/cs/private_events/">Private events</a>
-          </li>
-          <li class="header-navigation__tabs">
-            <a class="header-navigation__button" href="/cs/catering/">Catering</a>
-          </li>
-          <li class="header-navigation__tabs">
-            <a class="header-navigation__button" href="/cs/rezervace/">Rezervace</a>
-          </li>
-    
-        </ul>
-  </nav>  
+        <li class="header-navigation__tabs">
+          <a class="header-navigation__button" href="/cs/o_nas/">O nás</a>
+        </li>
 
+        <!-- Submenu: Menu -->
+        <li class="header-navigation__tabs menu__item--has-submenu">
+          <input type="checkbox" class="submenu__checkbox" id="menu-submenu">
+          <label for="menu-submenu" class="header-navigation__button">Menu</label>
+
+          <ul class="header-navigation__submenu">
+            <li><label for="menu-submenu" class="submenu__close">✕</label></li>
+            <li><a class="header-navigation__link" href="/cs/menu/poledni/">Polední menu</a></li>
+            <li><a class="header-navigation__link" href="/cs/menu/sashimi/">Sashimi</a></li>
+            <li><a class="header-navigation__link" href="/cs/menu/nigiri/">Nigiri Zushi</a></li>
+            <li><a class="header-navigation__link" href="/cs/menu/maki/">Hoso maki & Uramaki</a></li>
+            <li><a class="header-navigation__link" href="/cs/menu/alacarte/">A La Carte</a></li>
+            <li><a class="header-navigation__link" href="/cs/menu/degustacni/">Degustační menu</a></li>
+          </ul>
+        </li>
+
+        <!-- Submenu: Nápoje -->
+        <li class="header-navigation__tabs menu__item--has-submenu">
+          <input type="checkbox" class="submenu__checkbox" id="napoje-submenu">
+          <label for="napoje-submenu" class="header-navigation__button">Nápoje</label>
+
+          <ul class="header-navigation__submenu">
+            <li><label for="napoje-submenu" class="submenu__close">✕</label></li>
+            <li><a class="header-navigation__link" href="/cs/napoje/napojovy_listek/">Nápojový lístek</a></li>
+            <li><a class="header-navigation__link" href="/cs/napoje/sake/">Japonské saké</a></li>
+            <li><a class="header-navigation__link" href="/cs/napoje/whisky/">Japonská whisky</a></li>
+            <li><a class="header-navigation__link" href="/cs/napoje/vino/">Vinný lístek</a></li>
+            <li><a class="header-navigation__link" href="/cs/napoje/champagne/">Champagne</a></li>
+          </ul>
+        </li>
+
+        <li class="header-navigation__tabs">
+          <a class="header-navigation__button" href="/cs/nas_tym/">Náš tým</a>
+        </li>
+        <li class="header-navigation__tabs">
+          <a class="header-navigation__button" href="/cs/private_events/">Private events</a>
+        </li>
+        <li class="header-navigation__tabs">
+          <a class="header-navigation__button" href="/cs/catering/">Catering</a>
+        </li>
+        <li class="header-navigation__tabs">
+          <a class="header-navigation__button" href="/cs/rezervace/">Rezervace</a>
+        </li>
+      </ul>
+    </nav>
   </div>
+
 
   <div class="language-switcher">
     <a href="/en/">EN</a> | <a href="/cs/">CS</a>

@@ -903,10 +903,10 @@ border-color: #AA0000 !important;
 .header-navigation__tabs {
   border-bottom: 1px solid white;
   margin-bottom: 20px;
-  margin-top: 20px;
-
-  
+  margin-top: 20px;  
 }
+
+
 
 .header-navigation__link {
   display: block;
@@ -948,6 +948,14 @@ border-color: #AA0000 !important;
 
   .header-navigation__tabs {
     border-bottom: none; /* Odstraní spodní okraj na desktopu */
+    margin-top: 0; /* Odstraní horní okraj na desktopu */
+    margin-bottom: 0; /* Odstraní spodní okraj na desktopu */
+  }
+
+  .header-navigation__button {
+    margin-top: 0;
+    font-size: 300 !important;
+    font-style: normal;
   }
 
   .header__logo-container {
@@ -957,6 +965,61 @@ border-color: #AA0000 !important;
    
   }
   
+}
+/* 📱 MOBILNÍ VERZE – submenu funguje na kliknutí */
+@media screen and (max-width: 1049px) {
+  .submenu__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .header-navigation__submenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .submenu__checkbox:checked + .header-navigation__button + .header-navigation__submenu {
+    display: flex;
+  }
+
+  .submenu__close {
+    align-self: flex-end;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* 💻 DESKTOP – submenu se zobrazuje klasicky */
+@media screen and (min-width: 1050px) {
+  .submenu__checkbox,
+  .submenu__close {
+    display: none !important;
+  }
+
+  .header-navigation__submenu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    padding: 1rem;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+  }
+
+  .menu__item--has-submenu:hover .header-navigation__submenu {
+    display: block;
+  }
 }
 
 /* Image wrapper for responsive images */
