@@ -399,6 +399,11 @@ strong {
     justify-content: space-between;
     max-width: 600px;
   }
+
+  .menu__alacarte {
+    max-width: 800px;
+    margin: 0 auto;
+  }
   
   .menu__drink {
     display: flex;
@@ -897,6 +902,10 @@ border-color: #AA0000 !important;
 
 .header-navigation__tabs {
   border-bottom: 1px solid white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  
 }
 
 .header-navigation__link {
@@ -913,16 +922,18 @@ border-color: #AA0000 !important;
   display: block
 
 }
-.header__logo { 
+.header__logo {
+  display: block; 
   margin-left: auto;
   margin-right: auto;
+  height: 100px; /* Výška loga */
 }
 .header__logo-container {
   display: inline;
   text-align: center;
 }
 
-@media screen  and (min-width: 800px) {
+@media screen  and (min-width: 1050px) {
   .menu__toggler {
     display: none; /* Skryje checkbox na větších obrazovkách */
   }
