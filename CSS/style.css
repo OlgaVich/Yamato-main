@@ -296,15 +296,20 @@ strong {
 
 }
 
-.footer-info__social-logo-facebook,
-.footer-info__social-logo-instagram {
-    height: 40px;
+.footer-info__social-logo-facebook {
+    height: 30px;
     width: auto;
     background-color: white;
-    border-radius: 50%;
-    margin-right: 0;
-    margin-bottom: 5px;
-    margin-left: 0;
+    border-radius: 5px;
+}
+.footer-info__social-logo-instagram {
+    height: 30px;
+    width: auto;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 20px;
+    
+   
 }
  
 .main-content {
