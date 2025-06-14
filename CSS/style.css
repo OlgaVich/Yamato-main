@@ -248,6 +248,7 @@ strong {
 @media (max-width: 800px) {
   .footer-info__social {
     justify-content: right;
+    margin-right: 0;
     
   }
 }
@@ -1056,9 +1057,9 @@ border-color: #AA0000 !important;
     /* Levý horní roh – silnější */
     radial-gradient(
       circle at top left,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.6) 30%,
-      rgba(0, 0, 0, 0) 55%
+      rgba(0, 0, 0,8) 0%,
+      rgba(0, 0, 0, 0.4) 20%,
+      rgba(0, 0, 0, 0) 35%
     ),
     /* Pravý horní roh – jemnější a mělčí */
     radial-gradient(
