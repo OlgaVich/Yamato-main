@@ -316,6 +316,13 @@ strong {
     
    
 }
+
+@media screen and (max-width: 800px) {
+  .footer-info__social-logo-instagram {
+    margin-right: 0;
+  }
+  
+}
  
 .main-page {
   padding: 15px;
@@ -696,7 +703,6 @@ h1 {
 } */
 
 .partner {
-	margin-top: 20px;
 	border: 1px solid silver;
 	padding: 30px;
 	border-radius: 10px;
@@ -706,7 +712,7 @@ h1 {
 
 .tabulka {
 
-	padding: 50px;
+	padding: 10px;
 }
 
 

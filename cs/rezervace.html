@@ -9,7 +9,7 @@ title: Rezervace
     <main class="reservation">
       <h1 class="reservation__heading">Rezervační formulář</h1>
   
-      <form class="reservation__form" id="reservation-form">
+      <form class="reservation__form" id="reservation-form" method="post" action="https://reservations.yamato.cz/cs/krok-1">
         <!-- Krok 1 -->
         <div class="reservation__step" id="step-1">
           <label class="reservation__label" for="date">Datum rezervace</label>
@@ -62,6 +62,7 @@ title: Rezervace
           <button class="reservation__button" type="button" id="next-button">Pokračovat</button>
   
           <!-- Poznámka jen pro první krok -->
+          <form id="reservation-form" method="post" action="https://reservations.yamato.cz/cs/krok-2">
           <p class="reservation__note reservation__note--step1">
             V případě, že Vám nepůjde zarezervovat stůl online, prosíme, volejte na číslo 
             <a href="tel:+420222212617">+420 222 212 617</a>. Děkujeme.
