@@ -905,10 +905,14 @@ border-color: #AA0000 !important;
   border-bottom: 1px solid white;
   margin-bottom: 20px;
   margin-top: 20px;  
+  font-weight: 300;
+  font-style: normal;
 }
 
-
-
+.header-navigation__button {
+  font-weight: 300;
+    font-style: normal;
+}
 .header-navigation__link {
   display: block;
   padding: 10px 15px;
@@ -955,7 +959,7 @@ border-color: #AA0000 !important;
 
   .header-navigation__button {
     margin-top: 0;
-    font-size: 300 !important;
+    font-weight: 300;
     font-style: normal;
   }
 
