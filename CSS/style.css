@@ -29,6 +29,7 @@ strong {
   display: flex;
   align-items: center;
   justify-content: space-between;
+ 
 }
 
 .header__logo {
@@ -47,6 +48,7 @@ strong {
   margin: 0;
   display: flex;
   align-items: center;
+  
 }
 
 .header-navigation__button {
@@ -520,7 +522,7 @@ strong {
   display: flex;
   justify-content: center;       /* Horizontální zarovnání na střed */
   align-items: flex-start;       /* Zarovnání nahoře */
-  padding: 4rem 1rem 2rem;       /* Horní mezera + postranní + spodní */
+  padding:0;       /* Horní mezera + postranní + spodní */
   /*
   background-image: url('/images/pozadi.jpg'); /* vlastní pozadí 
   background-size: cover;
@@ -938,7 +940,7 @@ border-color: #AA0000 !important;
   text-align: center;
 }
 
-@media screen  and (min-width: 1050px) {
+@media screen  and (min-width: 1100px) {
   .menu__toggler {
     display: none; /* Skryje checkbox na větších obrazovkách */
   }
@@ -972,7 +974,7 @@ border-color: #AA0000 !important;
   
 }
 /* 📱 MOBILNÍ VERZE – submenu funguje na kliknutí */
-@media screen and (max-width: 1049px) {
+@media screen and (max-width: 1099px) {
   .submenu__checkbox {
     position: absolute;
     left: -9999px;
