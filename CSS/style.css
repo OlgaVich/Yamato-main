@@ -99,10 +99,10 @@ strong {
 .header-navigation__link:hover {
   background-color: #AA0000;
 }
-
+/*
 .menu__item--has-submenu:hover .header-navigation__submenu {
   display: flex;
-}
+} */
 
 /* main content */
 
