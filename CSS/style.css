@@ -919,9 +919,8 @@ border-color: #AA0000 !important;
 
 .header-navigation__tabs {
   border-bottom: 1px solid white;
-
   margin-bottom: 20px;
-  margin-top: 20px;  
+  margin-top: 20px;
   font-weight: 300;
   font-style: normal;
 }
@@ -929,12 +928,15 @@ border-color: #AA0000 !important;
 .header-navigation__button {
   font-weight: 300;
     font-style: normal;
+    padding: 10px 15px;
+    
 }
 .header-navigation__link {
   display: block;
   padding: 10px 15px;
   color: white;
   text-decoration: none;
+  font-size: 20px;
 }
 .header-navigation__link:hover {
   background-color: #AA0000;
@@ -1034,7 +1036,7 @@ border-color: #AA0000 !important;
 }
 
 /* 💻 DESKTOP – submenu se zobrazuje klasicky */
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1099px) {
   .submenu__checkbox,
   .submenu__close {
     display: none !important;
