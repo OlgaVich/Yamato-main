@@ -24,6 +24,9 @@ strong {
   color: white;
   background-color: black;
   margin-top: 10px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header__logo-container {
@@ -99,10 +102,7 @@ strong {
 .header-navigation__link:hover {
   background-color: #AA0000;
 }
-/*
-.menu__item--has-submenu:hover .header-navigation__submenu {
-  display: flex;
-} */
+
 
 /* main content */
 
@@ -139,6 +139,9 @@ strong {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
 }
 
@@ -846,10 +849,10 @@ border-color: #AA0000 !important;
 .language-switcher a {
   text-decoration: none;
   color: white; /* nebo jiná barva podle pozadí */
-  margin-left: 0.5rem;
+  margin-left: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1099px) {
   .language-switcher {
     text-align: center;
     font-size: 0.9rem;
@@ -916,6 +919,7 @@ border-color: #AA0000 !important;
 
 .header-navigation__tabs {
   border-bottom: 1px solid white;
+
   margin-bottom: 20px;
   margin-top: 20px;  
   font-weight: 300;
@@ -949,6 +953,17 @@ border-color: #AA0000 !important;
 .header__logo-container {
   display: inline;
   text-align: center;
+}
+
+@media screen and (max-width: 1099px) {
+  header-navigation__button:hover {
+    text-decoration: none;
+}
+.header-navigation__button:active {
+    text-decoration: none;
+}
+
+  
 }
 
 @media screen  and (min-width: 1100px) {
