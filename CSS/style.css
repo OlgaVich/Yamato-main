@@ -1108,3 +1108,34 @@ border-color: #AA0000 !important;
       rgba(0, 0, 0, 0) 55%
     );
 }
+
+.image-wrapper {
+  display: block;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-topper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  
+}
+
+.image-topper {
+  display: block;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-topper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 50%);
+  pointer-events: none; } 
