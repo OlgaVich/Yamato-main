@@ -956,7 +956,7 @@ border-color: #AA0000 !important;
 }
 
 @media screen and (max-width: 1099px) {
-  header-navigation__button:hover {
+  .header-navigation__button:hover {
     text-decoration: none;
 }
 .header-navigation__button:active {
