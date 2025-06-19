@@ -1145,3 +1145,8 @@ border-color: #AA0000 !important;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
+
+a [href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}
