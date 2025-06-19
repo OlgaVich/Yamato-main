@@ -515,33 +515,14 @@ strong {
     color: white;
   }  
 
-/* rezervacni formular */
+/* rezervacni formular 
 
-
-/*
-// <weight>: Use a value from 100 to 900
-// <uniquifier>: Use a unique and descriptive class name
-
-.work-sans-<uniquifier> {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} 
-*/
 
 .reservation-page {
   display: flex;
-  justify-content: center;       /* Horizontální zarovnání na střed */
-  align-items: flex-start;       /* Zarovnání nahoře */
-  padding:0;       /* Horní mezera + postranní + spodní */
-  /*
-  background-image: url('/images/pozadi.jpg'); /* vlastní pozadí 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  */
-           /* Výška na celou obrazovku */
+  justify-content: center;       
+  align-items: flex-start;       
+ 
   box-sizing: border-box;
 }
 
@@ -551,7 +532,7 @@ strong {
   border-radius: 8px;
   max-width: 600px;
   width: 100%;
-  margin: 0 auto; /* Center the form */
+  margin: 0 auto; 
   
 }
 
@@ -687,6 +668,7 @@ a:hover {
   text-align: center;
   color: #ddd;
 }
+  */
 
 /* partneri
 
@@ -875,7 +857,7 @@ border-color: #AA0000 !important;
 
 .team__photo {
   height: 300px; /* cca 8 cm */
-  width: auto;
+  width: 230px; 
   display: block;
   margin: 0 auto;
   object-fit: cover;
@@ -1141,3 +1123,25 @@ border-color: #AA0000 !important;
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 50%);
   pointer-events: none; } 
+
+  .cookie-banner {
+  display: none; /* výchozí: schované */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.cookie-banner__btn {
+  margin-left: 1rem;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

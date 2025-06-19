@@ -1,7 +1,16 @@
 ---
 layout: layouts/en/sablona-hlavni.njk
 title: "Yamato Prague"
+description: "Discover an authentic taste experience inspired by Japan, where tradition meets precision and harmony. At Yamato, we believe that every moment holds its own unique beauty. We are inspired by the Japanese philosophy of ichi-go ichi-e."
 ---
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    This website uses cookies to improve the user experience.
+    <button id="cookie-accept" class="cookie-banner__btn">I agree</button>
+  </p>
+</div>
+
 <!-- Main Content Section -->
 <div class="main-page"> 
     <h1 class="main-content__title">Discover an authentic taste experience inspired by Japan, where tradition meets precision and harmony. </h1>
@@ -27,5 +36,16 @@ title: "Yamato Prague"
         <img src="/images/photomain.jpeg" alt="Mísa Sashimi" class="main-content__photo-image">
     </div>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          // kontrola, jestli uživatel odsouhlasil
+          if (!localStorage.getItem('cookieConsent')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+          }
+          document.getElementById('cookie-accept').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+          });
+        });
+      </script>
 <!-- Footer Section -->   
