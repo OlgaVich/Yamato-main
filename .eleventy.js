@@ -10,6 +10,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_redirects");
   // Zkopírovat složku favicon/ to _site/js/
   eleventyConfig.addPassthroughCopy("favicon.ico");
+ 
 }
 
 export const config = {

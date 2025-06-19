@@ -37,7 +37,7 @@ strong {
 }
 
 .header__logo {
-  height: 80px;
+  height: 75px;
   width: auto;
   padding: 0; 
 }
@@ -58,7 +58,7 @@ strong {
 .header-navigation__button {
     color: white;
     font-size: 1.3rem;
-    padding: 0px 15px;
+    padding: 0px 12px;
     text-decoration: none; 
     display: block;
     white-space: nowrap;
@@ -950,7 +950,7 @@ border-color: #AA0000 !important;
   display: block; 
   margin-left: auto;
   margin-right: auto;
-  height: 100px; /* Výška loga */
+  height: 80px; /* Výška loga */
 }
 .header__logo-container {
   display: inline;
