@@ -320,6 +320,11 @@ strong {
    
 }
 
+.footer-info__social-facebook,
+.footer-info__social-instagram {
+  color: white;
+}
+
 @media screen and (max-width: 800px) {
   .footer-info__social-logo-instagram {
     margin-right: 0;
@@ -1146,7 +1151,7 @@ border-color: #AA0000 !important;
   cursor: pointer;
 }
 
-.tel {
-  color: inherit !important;
- 
+a.tel {
+  color: white;
+  text-decoration: none;
 }
