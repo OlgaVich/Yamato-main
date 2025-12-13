@@ -1264,3 +1264,8 @@ a.tel {
     font-size: 1.35rem;
   }
 }
+
+/* zavření popupu přes :target */
+#close:target ~ .yamato-popup {
+  display: none;
+}
