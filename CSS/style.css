@@ -1160,6 +1160,7 @@ a.tel {
 
 /* === YAMATO CHRISTMAS POPUP === */
 
+
 .yamato-popup {
   position: fixed;
   inset: 0;
@@ -1171,11 +1172,7 @@ a.tel {
   z-index: 9999;
 }
 
-/* Po kliknutí na ✕ (odkaz na #close) se schová */
-#close:target ~ .yamato-popup {
-  display: none;
-}
-
+/* okno */
 .yamato-popup__window {
   background-color: black;
   color: white;
@@ -1183,21 +1180,28 @@ a.tel {
   border-radius: 12px;
   max-width: 520px;
   width: 100%;
-  padding: 2.5rem 2.5rem 2.2rem;
+  padding: 2.4rem 2.4rem 2.2rem;
   text-align: center;
   position: relative;
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
+
+  /* mobilní jistota */
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
-/* zavírací křížek */
+/* zavření */
 .yamato-popup__close {
-  position: absolute;
-  top: 14px;
-  right: 18px;
+  position: sticky;
+  top: 0;
+  float: right;
   font-size: 1.6rem;
   color: white;
   text-decoration: none;
+  line-height: 1;
+  margin-bottom: 1rem;
+  z-index: 2;
 }
 .yamato-popup__close:hover {
   color: #AA0000;
@@ -1205,9 +1209,9 @@ a.tel {
 
 /* nadpis */
 .yamato-popup__title {
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
 /* text */
@@ -1223,7 +1227,6 @@ a.tel {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  margin-bottom: 0.5rem;
 }
 
 .yamato-popup__links a {
@@ -1233,26 +1236,31 @@ a.tel {
   border-bottom: 1px solid #444;
   padding-bottom: 4px;
 }
-
 .yamato-popup__links a:hover {
   color: #AA0000;
   border-color: #AA0000;
 }
 
-/* oddělovač CZ / EN */
+/* oddělovač */
 .yamato-popup__divider {
   border: none;
   border-top: 1px solid #333;
   margin: 2.2rem 0;
 }
 
-/* mobil */
+/* mobilní doladění */
 @media (max-width: 600px) {
+  .yamato-popup {
+    align-items: flex-start;
+    padding-top: 8vh;
+  }
+
   .yamato-popup__window {
-    padding: 2rem 1.8rem;
+    padding: 1.8rem 1.6rem 1.6rem;
+    max-height: 80vh;
   }
 
   .yamato-popup__title {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 }
