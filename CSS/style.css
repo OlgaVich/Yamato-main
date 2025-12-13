@@ -1164,16 +1164,16 @@ a.tel {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   z-index: 9999;
 }
 
-/* otevření popupu */
-#popup:target {
-  display: flex;
+/* Po kliknutí na ✕ (odkaz na #close) se schová */
+#close:target ~ .yamato-popup {
+  display: none;
 }
 
 .yamato-popup__window {
