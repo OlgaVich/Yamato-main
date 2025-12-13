@@ -1157,3 +1157,102 @@ a.tel {
   text-decoration: none;
   font-size: 18px;
 }
+
+/* === YAMATO CHRISTMAS POPUP === */
+
+.yamato-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+/* otevření popupu */
+#popup:target {
+  display: flex;
+}
+
+.yamato-popup__window {
+  background-color: black;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 100%;
+  padding: 2.5rem 2.5rem 2.2rem;
+  text-align: center;
+  position: relative;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+
+/* zavírací křížek */
+.yamato-popup__close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+}
+.yamato-popup__close:hover {
+  color: #AA0000;
+}
+
+/* nadpis */
+.yamato-popup__title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* text */
+.yamato-popup__text {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 auto 1.8rem;
+  max-width: 420px;
+}
+
+/* odkazy */
+.yamato-popup__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.yamato-popup__links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 4px;
+}
+
+.yamato-popup__links a:hover {
+  color: #AA0000;
+  border-color: #AA0000;
+}
+
+/* oddělovač CZ / EN */
+.yamato-popup__divider {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 2.2rem 0;
+}
+
+/* mobil */
+@media (max-width: 600px) {
+  .yamato-popup__window {
+    padding: 2rem 1.8rem;
+  }
+
+  .yamato-popup__title {
+    font-size: 1.4rem;
+  }
+}
